@@ -60,18 +60,23 @@
       align-items: center;
       flex-direction: column;
       color: #fff;
+      width: 70%;
 
       .name{
         font-size: 3.5rem;
-        margin-bottom: 1rem;
-        @include respondMax(ipad-port) {
-          font-size: 2.8rem;
+        margin-bottom: 2rem;
+        @include respondMax(ipad-land) {
+          font-size: 2.5rem;
         }
-        @include respondMax(phone-land) {
+        @include respondMax(ipad-port) {
           font-size: 1.8rem;
         }
         @include respondMax(phone-land) {
           font-size: 1.4rem;
+        }
+        @include respondMax(phone-port) {
+          font-size: 0.9rem;
+          transform: scale(1.5);
         }
         font-weight: bold;
         display: flex;
@@ -88,11 +93,15 @@
         //font-weight: bold;
         text-transform: uppercase;
         @include specialMax(711px) {
-          font-size: 3rem;
+          font-size: 2.6rem;
+        }
+
+        @include respondMax(ipad-port) {
+          font-size: 1.8rem;
         }
 
         @include respondMax(phone-land) {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
         }
 
         @include respondMax(phone-port) {
@@ -106,18 +115,20 @@
         padding: 2rem 6rem;
         border-radius: 5px;
         text-decoration: none;
+        display: inline-block;
         @include respondMax(phone-land) {
           padding: 1rem 1rem;
           font-size: 1.4rem;
         }
-        background-color: #EC3A3B;
+        background-color: rgb(236, 58, 59);
         border: none;
         font-size: 1.8rem;
         color: #fff;
         cursor: pointer;
+        transition: all 0.3s;
         &:hover{
-          background-color: transparent;
-          border: 2px solid black;
+          transform: translateY(-3px);
+          border: 2px solid #fff;
         }
       }
 

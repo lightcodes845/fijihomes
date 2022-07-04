@@ -1,0 +1,60 @@
+@import "../../../partials/mixins";
+
+.news{
+  .container{
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .section{
+    margin: 5rem 0;
+    display: flex;
+    align-items: center;
+    @include specialMax(768px){
+      flex-direction: column-reverse;
+      &:nth-of-type(even){
+        flex-direction: column
+      }
+    }
+
+    .side_image{
+      flex: 1;
+      width: 100%;
+      height: auto;
+      //margin-right: 2rem;
+      padding: 2rem;
+      @include specialMax(768px){
+        //margin-right: 0;
+        //margin-top: 2rem;
+        padding: 2rem 0;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+    .side_text{
+      flex: 1;
+      h2{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+      p{
+        text-align: justify;
+        font-size: 1.8rem;
+        line-height: 2.5;
+        @include respondMax(ipad-land) {
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+
+}

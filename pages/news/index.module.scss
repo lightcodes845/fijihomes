@@ -1,0 +1,23 @@
+@import "../../partials/mixins";
+
+.news_page {
+  width: 100%;
+  min-height: 100vh;
+  //margin-top: 11rem;
+
+  .container {
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+
+}

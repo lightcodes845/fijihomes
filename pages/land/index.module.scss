@@ -1,0 +1,44 @@
+@import "../../partials/mixins";
+
+.land_page {
+  width: 100%;
+  //margin-top: 11rem;
+
+  .container{
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .text_content{
+    margin: 5rem 0;
+    display: flex;
+    @include respondMax(ipad-port) {
+      flex-direction: column;
+    }
+
+    .side_one{
+      flex: 1;
+      margin: 1rem;
+      font-size: 1.8rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
+    .side_two {
+      flex: 1;
+      margin: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+
+}

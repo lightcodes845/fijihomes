@@ -1,0 +1,41 @@
+@import "../../partials/mixins";
+
+.about_page {
+  width: 100%;
+  margin-top: 11rem;
+
+  .container {
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .text_content{
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    text-align: justify;
+    .side_one{
+      flex: 1;
+      margin: 2rem 0;
+      p{
+        margin-bottom: 2rem;
+      };
+    }
+    .side_two{
+      flex: 1;
+      margin: 1rem;
+      h3{
+        font-size: 3rem;
+      }
+    }
+  }
+
+}

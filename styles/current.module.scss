@@ -1,0 +1,110 @@
+@import "../partials/mixins";
+
+.house_name {
+  margin-top: 11rem;
+
+  .container {
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+
+  }
+
+  .image_gallery {
+    margin: 4rem 0;
+  }
+
+  .content {
+    margin: 0 0 4rem 0;
+    display: flex;
+    @include respondMax(ipad-port) {
+      display: block;
+    }
+
+    .side_one {
+      padding-left: 2rem;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      @include respondMax(ipad-port) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .side_two {
+      flex: 1;
+
+      p {
+        font-size: 1.4rem;
+        line-height: 1.7;
+        text-align: justify;
+
+        &:nth-of-type(2) {
+          margin-top: 2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .specification {
+    width: 100%;
+    margin: 7rem 0;
+    padding: 3rem 0;
+    background-color: #f5eded;
+
+    .spec_content {
+      h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .box {
+          width: 33rem;
+          @include specialMax(797px) {
+            width: 90%;
+          }
+          margin: 3rem;
+          border-top: 1px dotted black;
+
+          .heading {
+            display: flex;
+            align-items: center;
+            padding-top: 1rem;
+            margin-bottom: 1rem;
+            svg {
+              font-size: 2rem;
+              color: #ff5a3c;
+            }
+            h3 {
+              margin-left: 1rem;
+              font-size: 2rem;
+              text-transform: uppercase;
+              color: #ff5a3c;
+            }
+          }
+
+          p {
+            font-size: 1.4rem;
+          }
+
+        }
+      }
+    }
+
+  }
+
+}

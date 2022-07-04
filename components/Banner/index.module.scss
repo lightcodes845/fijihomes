@@ -1,0 +1,60 @@
+@import "../../partials/mixins";
+
+.banner {
+  width: 100%;
+  margin-top: 11rem;
+
+  .container {
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .image_parent {
+    position: relative;
+
+    .heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      z-index: 50;
+
+      h1 {
+        font-size: 7rem;
+        text-align: center;
+        @include respondMax(phone-land) {
+          font-size: 4rem;
+        }
+      }
+    }
+
+    .image_content {
+      //background-image: url("../../public/assets/img/about.jpeg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 45rem;
+      @include respondMax(phone-land) {
+        height: 35rem;
+      }
+    }
+
+    .backdrop {
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 50;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}

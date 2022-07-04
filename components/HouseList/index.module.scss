@@ -1,0 +1,138 @@
+@import "../../partials/mixins";
+
+.house_list{
+  width: 100%;
+  height: 100%;
+  margin: 4rem 0;
+
+  .container{
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+
+  }
+
+  .content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .no_houses{
+      font-weight: bold;
+      color: #ff5a3c;
+      font-size: 2rem;
+      padding: 7rem 0;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 1rem;
+      }
+    }
+
+    .box {
+      width: 28rem;
+      height: 35rem;
+      @include respondMax(ipad-port) {
+        justify-content: center;
+      }
+      margin: 3rem;
+
+      @include respondMax(phone-land) {
+        margin: 1rem;
+      }
+
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+
+
+      .top {
+        width: 100%;
+        flex: 1;
+        //overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          transition: all .5s ease-in;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+      }
+      .bottom{
+        @include respondMax(phone-port) {
+          //margin-top: -1rem;
+        }
+        flex: 1;
+        padding: 2rem;
+        @include respondMax(phone-land) {
+          padding: 1rem;
+        }
+        .address{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 1.7rem;
+          @include respondMax(phone-land) {
+            font-size: 1.4rem;
+          }
+          //@include respondMax(phone-port) {
+          //  font-size: 1.2rem;
+          //}
+          margin-bottom: 1rem;
+          svg {
+            color: #ff5a3c;
+            transform: scale(1.2);
+          }
+          span{
+            margin-left: 1rem;
+            font-weight: bold;
+          }
+        }
+
+        .text{
+          font-size: 1.2rem;
+          line-height: 1.5;
+          //@include respondMax(phone-land) {
+          //  font-size: 1rem;
+          //  line-height: 1.3;
+          //}
+          height: 6.4rem;
+          text-align: justify;
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        .cta{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span{
+            font-weight: bold;
+            font-size: 1.5rem;
+          }
+          a{
+            background-color: #ff5a3c;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            color: #fff;
+            @include respondMax(phone-port) {
+              padding: 5px 10px;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}

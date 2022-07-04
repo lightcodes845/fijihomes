@@ -1,0 +1,50 @@
+@import "../../partials/mixins";
+
+.mini_banner{
+  margin-top: 11rem;
+  width: 100%;
+  background-image: url("../../public/assets/img/24.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .container{
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  .content{
+    padding: 5rem 0;
+    h1{
+      font-size: 5rem;
+      @include respondMax(ipad-port) {
+        font-size: 3rem;
+        text-align: center;
+      }
+      margin-bottom: 3rem;
+    }
+
+    .menu{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 2rem;
+      @include respondMax(ipad-port) {
+        justify-content: center;
+      }
+      span{
+        margin: 0 2px;
+        &:nth-of-type(1){
+          color: #ff5a3c;
+        }
+      }
+    }
+  }
+
+}

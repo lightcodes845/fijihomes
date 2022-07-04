@@ -1,0 +1,80 @@
+@import "../../../partials/mixins";
+
+.kirton {
+  margin-top: 11rem;
+
+  .container {
+    padding: 1rem;
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    @include respondMax(tab-land) {
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .image_gallery {
+    margin: 4rem 0;
+  }
+
+  .video_container{
+    width: 100%;
+    height: 100%;
+    margin: 6rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @include respondMax(phone-land) {
+      margin: 2rem 0;
+      padding: 2rem 0;
+    }
+
+    h2{
+      //flex: 1;
+      font-size: 2.5rem;
+      @include respondMax(phone-land) {
+        font-size: 1.8rem;
+      }
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .Video{
+      //flex: 1;
+      border: none;
+      outline: none;
+      width: auto;
+      height: 50rem;
+      @include respondMax(ipad-land) {
+        height: auto;
+      }
+    }
+  }
+
+  .site_location{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .site_plan{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .timeline{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
